@@ -1,12 +1,12 @@
 {
   "@microsoft/generator-sharepoint": {
-    "isCreatingSolution": true,
+    "isCreatingSolution": false,
     "environment": "spo",
     "version": "1.9.1",
     "libraryName": "zfunctions",
     "libraryId": "fd13ed77-920f-491f-b773-bc50a40bbb12",
     "packageManager": "npm",
     "isDomainIsolated": false,
-    "componentType": "library"
+    "componentType": "webpart"
   }
 }

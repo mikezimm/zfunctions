@@ -9,10 +9,37 @@
           "manifest": "./src/libraries/zfunctions/ZfunctionsLibrary.manifest.json"
         }
       ]
+    },
+    "components-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/components/ComponentsWebPart.js",
+          "manifest": "./src/webparts/components/ComponentsWebPart.manifest.json"
+        }
+      ]
+    },
+    "common-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/common/CommonWebPart.js",
+          "manifest": "./src/webparts/common/CommonWebPart.manifest.json"
+        }
+      ]
+    },
+    "my-components-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/myComponents/MyComponentsWebPart.js",
+          "manifest": "./src/webparts/myComponents/MyComponentsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "ZfunctionsLibraryStrings": "lib/libraries/zfunctions/loc/{locale}.js"
+    "ZfunctionsLibraryStrings": "lib/libraries/zfunctions/loc/{locale}.js",
+    "ComponentsWebPartStrings": "lib/webparts/components/loc/{locale}.js",
+    "CommonWebPartStrings": "lib/webparts/common/loc/{locale}.js",
+    "MyComponentsWebPartStrings": "lib/webparts/myComponents/loc/{locale}.js"
   }
 }
