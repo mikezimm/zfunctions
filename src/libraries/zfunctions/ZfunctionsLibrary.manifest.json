@@ -1,0 +1,9 @@
+{
+  "id": "6b70d0d2-0ffe-4c0c-b857-79002bce99d2",
+  "alias": "ZfunctionsLibrary",
+  "componentType": "Library",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2
+}

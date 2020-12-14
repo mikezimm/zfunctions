@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "zfunctions-library": {
+      "components": [
+        {
+          "entrypoint": "./lib/libraries/zfunctions/ZfunctionsLibrary.js",
+          "manifest": "./src/libraries/zfunctions/ZfunctionsLibrary.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ZfunctionsLibraryStrings": "lib/libraries/zfunctions/loc/{locale}.js"
+  }
+}
