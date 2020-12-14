@@ -17,7 +17,7 @@
  *                                                                                               
  */
 
-import { IUser} from '../webparts/pivottiles7/components/IReUsableInterfaces';
+import { IUser} from './IReUsableInterfaces';
 
 export const msPerMin = 60000;
 export const msPerHr = 3600000;

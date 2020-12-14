@@ -19,6 +19,7 @@
 
 import * as React from 'react';
 
+import { sortStringArray , sortNumberArray } from './arrayServices';
 //https://stackoverflow.com/a/2970667/4210807
 export function camelize(str,firstCap: boolean) {
 
@@ -151,4 +152,50 @@ export function encodeDecodeString( str : string , doThis: 'encode' | 'decode') 
 
   return newStr;
 
+}
+
+/** was: cleanProjEditOptions from TrackMyTime7
+ * This function takes a string with ;, converts to array of strings and removes empty elements (like if ; is at the end.)
+ * 
+ * example input:   ";test;this;string;;now;"
+ * example result:  ['test','this','string','now']
+ * 
+ * @param str
+ */
+export function getStringArrayFromString ( str : string, delim: string, removeEmpty: boolean, sort: 'asc' | 'dec' | null ) : string[] {
+
+    if (str == null ) { return null; }
+    else if (  delim == null || delim == '' ) { return [ str ]; }
+  
+    let arr : string[] = str.split( delim );
+
+    arr = sortStringArray( arr, sort );
+
+    let finalStringArray : string[] = [];
+
+    if ( removeEmpty === true ) {
+        finalStringArray = arr.filter( (el) => {
+            return el != null;
+        });
+    } else {
+        finalStringArray = arr;
+    }
+
+    return finalStringArray;
+  
+}
+
+/** was originally copied from cleanProjEditOptions from TrackMyTime7
+ * This function takes a string with ;, converts to array of strings and removes empty elements (like if ; is at the end.)
+ * 
+ * example input:   ";test;this;string;;now;"
+ * example result:  "test;this;string;now"
+ * @param str
+ */
+
+export function cleanEmptyElementsFromString ( str : string, delim: string, removeEmpty: boolean, sort: 'asc' | 'dec' | null ) : string {
+
+    let stringArray : string[] = getStringArrayFromString( str, delim, removeEmpty, sort );
+    return stringArray.join(';');
+  
 }
